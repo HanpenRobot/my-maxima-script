@@ -1,0 +1,132 @@
+load(affine)$
+
+C:/maxima-5.47.0/share/maxima/5.47.0/share/affine/affine.lisp
+grobner_basis([x*y+y,x*y^2+x*y]);
+
+/* 結果は以下
+(%i2)
+grobner_basis([x*y+y,x*y^2+x*y]);
+.
+ . 1 . 1                                2
+(%o2)/R/                    [- y  - y, (- x - 1) y] */
+
+
+grobner_basis([x^5+y^4+z^3-1,x^3+y^3+z^2-1]);
+
+(%i4) grobner_basis([x^5+y^4+z^3-1,x^3+y^3+z^2-1]);
+
+ . 6 . 13 . 39.
+ . 6 . 13 . 39
+ . 6 . 13 . 197 . 39
+ . 6 . 13 . 491 . 562 . 222.
+ . 6 . 13 . 491 . 562 . 222
+ . 6 . 13 . 491 . 562 . 127
+ . 6 . 13 . 491 . 562 . 466 . 127.
+ . 6 . 13 . 491 . 562 . 466 . 127.
+ . 6 . 13 . 491 . 562 . 466 . 127
+ . 6 . 13 . 491 . 562 . 71.
+ . 6 . 13 . 491 . 562 . 71.
+ . 6 . 13 . 491 . 562 . 71.
+ . 6 . 13 . 491 . 562 . 71.
+ . 6 . 13 . 491 . 562 . 71.
+ . 6 . 13 . 491 . 562 . 71             2    3    3          3    3           4    5
+(%o4)/R/ [- z  - y  - x  + 1, (- y  - x  + 1) z + y  + x  - 1,
+                12      11      10      9      8      7      6      5      4
+((- x + 1) y + x   + 2 x   + 2 x   + 4 x  + 6 x  + 3 x  - 2 x  - 4 x  - 7 x
+      3                3      2             8
+ - 5 x  + x - 1) z + (x  + 2 x  + 2 x + 1) y
+     5      4      3      2             7
+ + (x  + 2 x  + 3 x  + 4 x  + 4 x + 2) y
+     7      6      5      4      3      2             6
+ + (x  + 2 x  + 3 x  + 5 x  + 6 x  + 4 x  + 3 x + 3) y
+     7      6      5      4      3      2         5
+ + (x  + 4 x  + 6 x  + 7 x  + 4 x  - 2 x  - 3 x) y
+       8      7      6      4      3      2             4
+ + (2 x  + 4 x  + 3 x  - 2 x  - 2 x  - 2 x  - 2 x - 1) y
+       10      9      8      7      6    5      4      3      2             3
+ + (2 x   + 4 x  + 5 x  + 6 x  + 6 x  + x  - 4 x  - 5 x  - 6 x  - 4 x - 5) y
+     10      9      8      7    6      5      4      3   2
+ + (x   + 3 x  + 4 x  + 4 x  + x  - 4 x  - 6 x  - 3 x ) y
+     12      11      10      9      8    7      6      5      4      3
+ + (x   + 3 x   + 4 x   + 5 x  + 4 x  - x  - 4 x  - 3 x  - 5 x  - 4 x  + x - 1)
+      13      12    11    10      9      8      7    6    5      4
+ y + x   + 2 x   + x   - x   - 2 x  - 2 x  - 2 x  - x  + x  + 3 x  - x + 1,
+    13      12      11      10      9      8    7      6      5      4      3
+(- x   - 2 x   - 3 x   - 5 x   - 7 x  - 6 x  - x  + 4 x  + 9 x  + 8 x  + 4 x )
+         4      3      2             8       6      5      4      3      2
+ z + (- x  - 2 x  - 3 x  - 2 x - 1) y  + (- x  - 2 x  - 4 x  - 5 x  - 6 x
+             7       8      7      6      5      4      3      2             6
+ - 4 x - 2) y  + (- x  - 2 x  - 4 x  - 6 x  - 8 x  - 7 x  - 6 x  - 4 x - 2) y
+       8      7      6       5      4      3      2             5
+ + (- x  - 4 x  - 7 x  - 10 x  - 7 x  - 2 x  + 3 x  + 2 x + 1) y
+         9      8      7      6    5      4      3      2             4
+ + (- 2 x  - 4 x  - 5 x  - 2 x  + x  + 3 x  + 3 x  + 3 x  + 2 x + 1) y
+         11      10      9      8      7      6    5      4      3      2
+ + (- 2 x   - 4 x   - 7 x  - 8 x  - 9 x  - 4 x  + x  + 7 x  + 8 x  + 9 x  + 6 x
+       3       11      10      9      8      7      6      5      4      3   2
+ + 3) y  + (- x   - 3 x   - 5 x  - 6 x  - 3 x  + 2 x  + 7 x  + 6 x  + 3 x ) y
+       13      12      11      10      9      8      7      6      5      4
+ + (- x   - 3 x   - 5 x   - 7 x   - 6 x  - 2 x  + 3 x  + 5 x  + 7 x  + 6 x
+      3       14      13      12      10      9      8      7      5      4
+ + 3 x ) y - x   - 2 x   - 2 x   + 2 x   + 3 x  + 3 x  + 2 x  - 2 x  - 2 x
+    3     9    8         3       6         5       4         6      3       3
+ - x , - y  - y  + (- 3 x  + 3) y  + (- 2 x  + 2) y  + (- 3 x  + 6 x  - 3) y
+    10    9      6      5      3
+ - x   - x  + 3 x  + 2 x  - 3 x ]
+
+
+数秒で結果はでた。しかし、本に書いてある結果と全く違うようにみえる。
+TODO: 理由を確認
+
+
+https://maxima.sourceforge.io/docs/manual/de/maxima_249.html
+
+load("grobner");
+demo("grobner.demo");
+
+https://maxima.sourceforge.io/docs/manual/de/maxima_250.html
+
+
+(%i1)
+poly_add(z+x^2*y,x-z,[x,y,z]);
+
+
+```lisp
+
+
+結局, maximaだとうまく行かなったので、reduceで実行した
+% パッケージの読み込み
+load_package groebner;
+
+% 多項式をリストとして定義
+poly_set := {x^5+y^4+z^3-1,x^3+y^3+z^2-1};
+
+% 変数の順序を定義 (通常は辞書式順序が使われる)
+vars := {x, y};
+
+torder({x, y, z}, revgradlex); % 辞書式順序を指定
+% グレブナー基底の計算
+result := groebner(poly_set, vars);
+
+% 結果を表示
+result;
+
+revgradlex
+
+
+http://www.reduce-algebra.com/manual/manualse152.html
+
+
+
+
+load_package groebner;
+
+poly_set := {x^5+y^4+z^3-1,x^3+y^3+z^2-1};
+
+
+torder({x, y, z}, revgradlex);
+result := groebner(poly_set, vars);
+
+result;
+
+```
